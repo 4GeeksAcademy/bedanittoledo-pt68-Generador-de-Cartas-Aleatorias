@@ -4,17 +4,33 @@ body{
     background: rgb(11, 208, 24);
 }
 .card{
-    display: inline-block;
+    text-align: center;
     margin: auto;
     height:400px;
+    font-size: 80px;
     width: 250px;
     padding: 20px;
+    padding-top: 140px;
     border:1px solid black;
     border-radius: 5px;
     position: relative;
     }
-   .top-suite{ 
-    position:absolute;
-    top: 0;
-    left: 0;
+
+.card::before{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 80px;
 }
+
+.card::after{
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 80px;
+}
+.spade:before, .spade:after{content: "\2660";}
+.club:before, .club:after{content: "\2663";}
+.heart:before, .heart:after{content: "\2665";color:red;}
+.diamond:before, .diamond:after{content: "\2666";color:red;}
+
